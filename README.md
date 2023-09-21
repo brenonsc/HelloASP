@@ -6,38 +6,60 @@ Este repositório contém uma Web API em ASP.NET que implementa três endpoints 
 
 ## Endpoints
 
-### 1. Exibindo a mensagem "Hello World!"
+### 1. Exibindo a mensagem "Hello ASP.NET!"
 
-- **Endpoint:** `/hello`
+- **Endpoint:** `~/`
 - **Método HTTP:** GET
-- **Descrição:** Este endpoint retorna a mensagem "Hello World!" quando acessado.
+- **Descrição:** Este endpoint retorna a mensagem "Hello ASP.NET" quando acessado.
 
 #### Exemplo de Uso:
 
 ```shell
-curl -X GET https://sua-api.com/hello
+curl -X GET https://sua-api.com/
 ```
 
 #### Resposta:
 
 ```json
 {
-  "message": "Hello World!"
+  "message": "Hello ASP.NET!"
 }
 ```
 
 <br>
 
-### 2. Exibindo a lista de BSM's da Generation Brasil
+### 2. Exibindo a mensagem "Hello {name}!"
 
-- **Endpoint:** `/bsm`
+- **Endpoint:** `/{name}`
 - **Método HTTP:** GET
-- **Descrição:** Este endpoint retorna uma lista de BSM's (Bolsa de Valores, Sociedade e Mercadorias) relacionados à Generation Brasil.
+- **Descrição:** Este endpoint retorna a mensagem "Hello {name}!" quando acessado.
 
 #### Exemplo de Uso:
 
 ```shell
-curl -X GET https://sua-api.com/bsm
+curl -X GET https://sua-api.com/{name}
+```
+
+#### Resposta:
+
+```json
+{
+  "message": "Hello {name}!"
+}
+```
+
+<br>
+
+### 3. Exibindo a lista de BSM's da Generation Brasil
+
+- **Endpoint:** `/bsms`
+- **Método HTTP:** GET
+- **Descrição:** Este endpoint retorna uma lista de BSM's relacionados à Generation Brasil.
+
+#### Exemplo de Uso:
+
+```shell
+curl -X GET https://sua-api.com/bsms
 ```
 
 #### Resposta:
@@ -55,7 +77,7 @@ curl -X GET https://sua-api.com/bsm
 
 <br>
 
-### 3. Exibindo uma lista de objetivos de aprendizagem desta semana
+### 4. Exibindo uma lista de objetivos de aprendizagem desta semana
 
 - **Endpoint:** `/objetivos`
 - **Método HTTP:** GET
@@ -88,23 +110,11 @@ Para executar esta Web API em sua máquina local, siga estas etapas:
 
 1. Certifique-se de que você possui o ambiente de desenvolvimento .NET instalado. Você pode baixá-lo em [dotnet.microsoft.com](https://dotnet.microsoft.com/download).
 
-2. Clone este repositório em seu computador:
+2. Clone este repositório em seu computador
 
-```shell
-git clone https://github.com/seu-usuario/sua-api-aspnet.git
-```
+3. Navegue até o diretório do projeto
 
-3. Navegue até o diretório do projeto:
-
-```shell
-cd sua-api-aspnet
-```
-
-4. Execute o aplicativo:
-
-```shell
-dotnet run
-```
+4. Execute o aplicativo
 
 A API estará acessível em `http://localhost:5000` por padrão, mas você pode configurar a porta desejada no arquivo de configuração.
 
